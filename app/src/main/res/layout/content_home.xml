@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.HomeActivity"
+    tools:showIn="@layout/app_bar_home">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"/>
+
+    <com.cleveroad.loopbar.widget.LoopBarView
+        android:id="@+id/endlessView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:enls_orientation="horizontal"
+        app:enls_selectionGravity="start"
+        app:enls_selectionMargin="5dp"
+        app:enls_overlaySize="5dp"
+        app:enls_selectionInAnimation="@animator/enls_scale_restore"
+        app:enls_selectionOutAnimation="@animator/enls_scale_small"
+        app:enls_selectionBackground="@color/colorAccent"
+        app:enls_listBackground="#BDBDBD"/>
+
+
+</RelativeLayout>
